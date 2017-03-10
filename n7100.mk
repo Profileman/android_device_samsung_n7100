@@ -98,6 +98,10 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     Stk
 
+# Doze mode
+PRODUCT_PACKAGES += \
+    CosmicDoze
+
 # Samsung symbols
 PRODUCT_PACKAGES += \
     libsamsung_symbols
