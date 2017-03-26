@@ -64,38 +64,11 @@ PRODUCT_PACKAGES += \
     libdmitry \
     libshim_gpsd
 
-# Additional apps
-PRODUCT_PACKAGES += \
-    OpenDelta
-
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.smdk4x12
 
-# NFC
 PRODUCT_PACKAGES += \
-    nfc.exynos4 \
-    libnfc \
-    libnfc_jni \
-    Nfc \
-    Tag
-
-PRODUCT_COPY_FILES += \
-    frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
-
-# NFCEE access control
-ifeq ($(TARGET_BUILD_VARIANT),user)
-    NFCEE_ACCESS_PATH := $(LOCAL_PATH)/configs/nfcee_access.xml
-else
-    NFCEE_ACCESS_PATH := $(LOCAL_PATH)/configs/nfcee_access_debug.xml
-endif
-
-PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
-
-PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
     Stk
 
 # Doze mode
